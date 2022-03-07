@@ -18,6 +18,9 @@ jobs:
   flathub-data-checker:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v3
+      with:
+        submodules: "true"
     - uses: flathub/actions/flathub-data-checker@master
       env:
         GITHUB_TOKEN: ${{ secrets.FLATHUBBOT_TOKEN }}
