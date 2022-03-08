@@ -47,3 +47,6 @@ for repo in ${checker_apps[@]}; do
         /app/flatpak-external-data-checker --verbose --update $repo/$manifest
     fi
 done
+
+echo $checker_apps
+echo "end of action"
